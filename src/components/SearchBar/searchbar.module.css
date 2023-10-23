@@ -1,7 +1,7 @@
 .searchBox {
   background-color: darkblue;
   display: flex;
-  height: 40px;
+  height: 50px;
 }
 
 .searchInput {
@@ -11,5 +11,8 @@
 }
 
 .logo {
-  background-color: black;
+  width: 350px;
+  background-image: url("../../../public/Marvel_Logo.jpg ");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
