@@ -1,4 +1,15 @@
 .searchBox {
-  background-color: red;
+  background-color: darkblue;
   display: flex;
+  height: 40px;
+}
+
+.searchInput {
+  background: transparent;
+  border: none;
+  text-align: center;
+}
+
+.logo {
+  background-color: black;
 }
