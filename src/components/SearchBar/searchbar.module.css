@@ -2,6 +2,16 @@
   background-color: darkblue;
   display: flex;
   height: 50px;
+  padding: 5px;
+  font-size: 16px;
+  border-width: 1px;
+  border-color: #cccccc;
+  background-color: #ffffff;
+  color: #000000;
+  border-style: solid;
+  border-radius: 0px;
+  box-shadow: 0px 0px 5px rgba(66, 66, 66, 0.75);
+  text-shadow: 0px 0px 5px rgba(66, 66, 66, 0.75);
 }
 
 .searchInput {
@@ -16,4 +26,8 @@
   background-image: url("../../../public/Marvel_Logo.jpg ");
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+.backDiv {
+  background-color: grey;
 }
