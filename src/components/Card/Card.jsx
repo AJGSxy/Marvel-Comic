@@ -4,7 +4,7 @@ export const Card = ({ name, img }) => {
   return (
     <div className={styles.cardBox}>
       {name}
-      <img width={200} height={270} src={`/public/${img}`} />
+      <img width={200} height={282} src={`/public/${img}`} />
     </div>
   );
 };
