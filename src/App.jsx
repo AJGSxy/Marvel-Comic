@@ -3,17 +3,15 @@ import { SearchBar } from "./components/SearchBar";
 import styles from "./app.module.css";
 import { ApiCall } from "./api";
 import { useState, useEffect } from "react";
-// ApiCall();
+import { CONSTANTS } from "./utils/constants";
 
 function App() {
-  const [apiData, setApiData] = useState(null);
-
+  const [marvelCharacters, setMarvelCharacters] = useState(null);
+  async function fetchData() {
+    const response = await ApiCall();
+    setMarvelCharacters(response.data.results);
+  }
   useEffect(() => {
-    async function fetchData() {
-      const data = await ApiCall();
-      setApiData(data);
-    }
-
     fetchData();
   }, []);
 
@@ -22,10 +20,21 @@ function App() {
       <SearchBar />
       <div className={styles.backgroundContainer}>
         <div className={styles.cardsContainer}>
-          {apiData &&
-            apiData.data.results.map((characters) => (
-              <Card key={characters.id} characters={characters.name} />
-            ))}
+          {marvelCharacters &&
+            marvelCharacters.map((character) => {
+              const urlImage = `${character.thumbnail.path}.${character.thumbnail.extension}`;
+              if (character.thumbnail.path === CONSTANTS.imgNotAvailable) {
+                return null;
+              }
+
+              return (
+                <Card
+                  key={character.id}
+                  characterName={character.name}
+                  img={urlImage}
+                />
+              );
+            })}
         </div>
       </div>
     </>

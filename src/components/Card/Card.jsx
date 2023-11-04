@@ -1,10 +1,10 @@
 import styles from "./card.module.css";
 // eslint-disable-next-line
-export const Card = ({ name, img }) => {
+export const Card = ({ characterName, img }) => {
   return (
     <div className={styles.cardBox}>
-      {name}
-      <img width={200} height={282} src={`/public/${img}`} />
+      <img width={200} height={282} src={img} />
+      {characterName}
     </div>
   );
 };
