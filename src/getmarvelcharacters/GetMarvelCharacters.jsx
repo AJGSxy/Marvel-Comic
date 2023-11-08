@@ -1,4 +1,4 @@
-export const ApiCharacters = async () => {
+export const GetMarvelCharacters = async () => {
   try {
     const response = await fetch(
       "http://gateway.marvel.com/v1/public/characters?limit=11&ts=1&apikey=bb79599b28a42de19a2ef130b35a767d&hash=0162bb5a8faf07b35b9c44f2bfff2096"

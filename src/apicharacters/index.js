@@ -1,1 +1,0 @@
-export { ApiCharacters } from "./ApiCharacters";

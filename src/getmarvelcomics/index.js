@@ -1,0 +1,1 @@
+import { GetMarvelComics } from "./GetMarvelComics";

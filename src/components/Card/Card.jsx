@@ -1,8 +1,12 @@
 import { useState } from "react";
 import styles from "./card.module.css";
 // eslint-disable-next-line
-export const Card = ({ characterName, img }) => {
-  const [isFavorited, setIsFavorited] = useState(false);
+export const Card = ({ characterName, img, id }) => {
+  const characterFavorited = window.localStorage.getItem("favorite")
+    ? JSON.parse(window.localStorage.getItem("favorite")).includes(id)
+    : false;
+
+  const [isFavorited, setIsFavorited] = useState(characterFavorited);
   return (
     <div className={styles.cardBox}>
       <div
@@ -15,7 +19,23 @@ export const Card = ({ characterName, img }) => {
       <div className={styles.characterName}>{characterName}</div>
       <button
         className={styles.favoriteButton}
-        onClick={() => setIsFavorited(!isFavorited)}
+        onClick={() => {
+          setIsFavorited(!isFavorited);
+          const favorites = window.localStorage.getItem("favorite");
+
+          if (favorites) {
+            const storedFav = JSON.parse(favorites);
+            console.log(storedFav);
+            storedFav.push(id);
+            window.localStorage.setItem("favorite", JSON.stringify(storedFav));
+          } else {
+            const favoritesArray = [id];
+            window.localStorage.setItem(
+              "favorite",
+              JSON.stringify(favoritesArray)
+            );
+          }
+        }}
       >
         {isFavorited ? "★" : "☆"}
       </button>

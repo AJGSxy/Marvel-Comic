@@ -1,0 +1,1 @@
+export { GetMarvelCharacters } from "./GetMarvelCharacters";
