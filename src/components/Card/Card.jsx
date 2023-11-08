@@ -8,7 +8,7 @@ export const Card = ({ characterName, img }) => {
       <div
         className={styles.imageContainer}
         style={{
-          backgroundImage: `linear-gradient(41deg, rgba(0, 0, 0, 0.33) 0%, rgba(255, 255, 255, 0.33) 50%, rgba(0, 0, 0, 0.33) 100%), url(${img})`,
+          backgroundImage: `linear-gradient(41deg, rgba(19, 2, 2, 0.33) 0%, rgba(255, 255, 255, 0) 50%, rgb(241, 235, 235, 33) 100%), url(${img})`,
           color: "white",
         }}
       />

@@ -8,7 +8,7 @@ export const SearchBar = () => {
           <input
             className={styles.searchInput}
             type="search"
-            placeholder="Buscar"
+            placeholder="🔍Buscar"
           />
         </div>
       </div>
