@@ -5,7 +5,8 @@ import { useState, useEffect } from "react";
 import { CONSTANTS } from "./utils/constants";
 import { GetMarvelComics } from "./getmarvelcomics/GetMarvelComics";
 import { GetMarvelCharacters } from "./getmarvelcharacters";
-GetMarvelComics();
+import { CardComicDetails } from "./components/cardcomicdetails/CardComicDetails";
+
 function App() {
   const [marvelCharacters, setMarvelCharacters] = useState(null);
   const [marvelComics, setMarvelComics] = useState(null);
@@ -28,7 +29,7 @@ function App() {
   return (
     <>
       <SearchBar />
-
+      <CardComicDetails />
       <div className={styles.cardsContainer}>
         {marvelCharacters &&
           marvelCharacters.map((character) => {

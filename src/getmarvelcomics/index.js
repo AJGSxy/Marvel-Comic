@@ -1,1 +1,1 @@
-import { GetMarvelComics } from "./GetMarvelComics";
+export { GetMarvelComics } from "./GetMarvelComics";

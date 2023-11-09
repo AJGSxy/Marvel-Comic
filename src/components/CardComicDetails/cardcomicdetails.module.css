@@ -1,0 +1,22 @@
+.backgroundContainer {
+  background-color: lightseagreen;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 93vh;
+  width: auto;
+}
+
+.imageComic {
+  background-color: blue;
+  height: 75vh;
+  width: 50vh;
+}
+
+.comicInfo {
+  background-color: lightseagreen;
+  height: 75vh;
+  width: 50vh;
+  padding: 15px;
+}
