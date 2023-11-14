@@ -1,18 +1,29 @@
 import styles from "./cardcomicdetails.module.css";
 
-export const CardComicDetails = () => {
+export const CardComicDetails = ({
+  img,
+  title,
+  description,
+  writer,
+  penciler,
+  cover,
+  onsaledate,
+}) => {
   return (
     <div className={styles.backgroundContainer}>
-      <div className={styles.imageComic}>hola1</div>
+      <div
+        className={styles.imageComic}
+        style={{ backgroundImage: `url(${img})` }}
+      ></div>
       <div className={styles.comicInfo}>
-        <h1>The Amazing Spiderman</h1>
+        <h1>{title}</h1>
         <h3>
-          published <br />
-          writer <br />
-          penciler <br />
-          cover artist
+          Published: {onsaledate} <br />
+          Writer: {writer} <br />
+          Penciler: {penciler} <br />
+          Cover Artist: {cover}
         </h3>
-        <h2>description comic</h2>
+        <h2>{description}</h2>
       </div>
     </div>
   );

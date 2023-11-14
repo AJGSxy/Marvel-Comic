@@ -1,10 +1,10 @@
 .backgroundContainer {
-  background-color: lightseagreen;
+  background-color: lightgrey;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  height: 93vh;
+  height: auto;
   width: auto;
 }
 
@@ -15,7 +15,7 @@
 }
 
 .comicInfo {
-  background-color: lightseagreen;
+  background-color: lightgrey;
   height: 75vh;
   width: 50vh;
   padding: 15px;
